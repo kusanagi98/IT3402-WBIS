@@ -1,4 +1,5 @@
 def check_prime(n)
+    return "Invalid param" if !n.is_a?(Numeric)
     if n <= 1
         return false
     end
