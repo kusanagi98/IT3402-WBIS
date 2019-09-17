@@ -1,4 +1,4 @@
-def check_prime(n)
+def prime?(n)
     return "Invalid param" if !n.is_a?(Numeric)
     if n <= 1
         return false
@@ -10,4 +10,10 @@ def check_prime(n)
     end
     true
 end
-puts check_prime(0)
+def print_prime(n)
+    return "Invalid param" if !n.is_a?(Numeric)
+    (1...n).each do |i|
+        print "#{i} " if prime?(i)
+    end
+end
+puts print_prime(100)
